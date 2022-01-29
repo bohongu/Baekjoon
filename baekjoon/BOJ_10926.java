@@ -3,17 +3,14 @@ package algorithmstudyBOJ;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
-public class BOJ_1008 {
+public class BOJ_10926 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine()," ");
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
+		String s = br.readLine();
 		
-		System.out.println(a/(double)b);
+		System.out.printf("%s??!", s);		
 
 	}
 

@@ -1,25 +1,32 @@
-package BOJ;
+package algorithmstudyBOJ;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class BOJ_9498 {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(bf.readLine());
 		
-		if(a>=90) {
+		if(n>=90) {
 			System.out.println("A");
-		} else if(a>=80) {
+		} else if(n>=80){
 			System.out.println("B");
-		} else if(a>=70) {
+		} else if(n>=70){
 			System.out.println("C");
-		} else if(a>=60) {
+		} else if(n>=60){
 			System.out.println("D");
 		} else {
 			System.out.println("F");
 		}
-		sc.close();
+		
+		System.out.println((n>=90) ? "A" : ((n>=80) ? "B" : ((n>=70) ? "C" : ((n>=60) ? "D" : "F" ))));
+
+		
+		
+
 	}
 
 }
