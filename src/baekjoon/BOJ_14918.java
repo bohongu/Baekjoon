@@ -1,17 +1,16 @@
-package BOJ;
+package test;
 
 import java.util.Scanner;
 
-public class BOJ_2739 {
+public class boj14918 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
+		int b = sc.nextInt();
 		
-		for(int i = 1;i<=9;i++) {
-			System.out.println(a + " * " + i + " = " + a*i);
-		}
-		sc.close();
+		System.out.println(a+b);
+		
 
 	}
 

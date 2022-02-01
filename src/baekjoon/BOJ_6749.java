@@ -2,16 +2,16 @@ package BOJ;
 
 import java.util.Scanner;
 
-public class BOJ_2739 {
+public class BOJ_6749 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
-		
-		for(int i = 1;i<=9;i++) {
-			System.out.println(a + " * " + i + " = " + a*i);
-		}
+		int b = sc.nextInt();
 		sc.close();
+		
+		int oldest = b - a;
+		System.out.println(b+oldest);
 
 	}
 

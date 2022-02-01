@@ -1,33 +1,29 @@
-package baekjoon;
+package BOJ;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class BOJ_2884 {
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine()," ");
-		int h = Integer.parseInt(st.nextToken());
-		int m = Integer.parseInt(st.nextToken());
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
 		
-		if(m<45) {
-			if(h==0) {
-				h=23;
-				m+=15;
-				System.out.println(h +" "+ m);
+		if (a==0) {
+			if (b>=45) {
+				System.out.println(0+ " " + (b-45));
 			} else {
-				h--;
-				m+=15;
-				System.out.println(h +" "+ m);
+				System.out.println(23+ " "  + (b+15));
 			}
 		} else {
-			m-=45;
-			System.out.println(h +" "+ m);
+			if (b>=45) {
+				System.out.println(a+ " " + (b-45));
+			} else {
+				System.out.println((a-1) + " " + (b+15));
+				
+			}
 		}
-
+		sc.close();
 	}
 
 }
