@@ -1,4 +1,4 @@
-package BOJ;
+package algorithmstudyBOJ;
 
 import java.util.Scanner;
 
@@ -9,19 +9,18 @@ public class BOJ_1110 {
 		int n = sc.nextInt();
 		int cnt = 0;
 		int tmp = n;
+		
 		while(true) {
-			int first = n/10;
-			int second = n%10;
-			n = second * 10 + (first+second)%10;
+			int ten = n/10;
+			int one = n%10;
+			n = one*10 + (ten + one)%10;
 			cnt++;
 			if(tmp == n) {
 				break;
-				
 			}
-				
 		}
 		System.out.println(cnt);
-		
+
 	}
 
 }

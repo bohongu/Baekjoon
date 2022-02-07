@@ -1,4 +1,4 @@
-package BOJ;
+package algorithmstudyBOJ;
 
 import java.util.Scanner;
 
