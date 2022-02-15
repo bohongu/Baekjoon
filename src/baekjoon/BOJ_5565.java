@@ -3,7 +3,7 @@ package algorithmstudyBOJ;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BOJ_5565 {
+public class Q5565_정재홍{
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

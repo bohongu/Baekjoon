@@ -2,7 +2,8 @@ package algorithmstudyBOJ;
 
 import java.util.Scanner;
 
-public class BOJ_2902 {
+public class Q2902_정재홍
+{
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

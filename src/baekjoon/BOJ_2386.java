@@ -2,11 +2,12 @@ package algorithmstudyBOJ;
 
 import java.util.Scanner;
 
-public class BOJ_2386 {
+public class Q2386_정재홍{
 
 	public static void main(String[] args) {
 		//1.charAt() : toLowerCase()는 인수로 String으로 받는데 charAt()은 char 타입
 		//2.split("") : split("")을 이용하려 하였으나 띄어쓰기에서 막힘
+		
 		//3. 그러면 띄어쓰기 기준으로 먼저 나눈 후 문자단위로 나눠서 해보자
 		Scanner sc = new Scanner(System.in);
 		
