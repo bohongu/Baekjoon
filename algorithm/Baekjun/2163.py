@@ -1,3 +1,5 @@
-M, N = map(int,input().split()) 
+case = int(input())
 
-print(N*M-1)
+for i in range(case) :
+    A, B = map(int, input().split())
+    print(f"Case #{i+1}: {A+B}")
