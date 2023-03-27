@@ -1,7 +1,6 @@
 import Type from "../Type";
 import { server } from "../../../mocks/server";
 import { rest } from "msw";
-
 import { render, screen } from "@testing-library/react";
 
 test("display product images from server", async () => {
@@ -14,6 +13,13 @@ test("display product images from server", async () => {
 
   const altText = productImages.map((element) => element.alt);
   expect(altText).toEqual(["America product", "England product"]);
+});
+
+test("fetch option information from server", async () => {
+  render(<Type orderType="options" />);
+
+  const optionCheckboxes = await screen.findAllByRole("checkbox");
+  expect(optionCheckboxes).toHaveLength(2);
 });
 
 test("when fetching product datas, face and error", async () => {
