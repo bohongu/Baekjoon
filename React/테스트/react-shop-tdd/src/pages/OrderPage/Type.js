@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import ErrorBanner from "../../components/ErrorBanner";
-import OrderContext from "../../contexts/OrderContext";
+import { OrderContext } from "../../contexts/OrderContext";
 import Products from "./Products";
 import Options from "./Options";
 

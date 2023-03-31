@@ -1,7 +1,7 @@
 import Type from "../Type";
 import { server } from "../../../mocks/server";
 import { rest } from "msw";
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../test-utils";
 
 test("display product images from server", async () => {
   render(<Type orderType="products" />);
