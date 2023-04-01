@@ -46,7 +46,7 @@ person.printThis();
 let printThis = person.printThis;
 printThis();
 //this === person : false
-//this === window : tru
+//this === window : true
 ```
 
 - 예외
