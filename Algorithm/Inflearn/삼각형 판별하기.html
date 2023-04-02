@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        let maxValue = Math.max(a, b, c);
+        let sum = a + b + c;
+
+        if (sum - maxValue < maxValue) {
+          return "NO";
+        } else {
+          return "YES";
+        }
+      }
+
+      console.log(solution(6, 7, 11));
+    </script>
+  </body>
+</html>
