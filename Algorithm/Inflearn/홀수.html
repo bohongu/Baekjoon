@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let sum = 0;
+        let minValue;
+        let oddArr = [];
+        let answer = [];
+        for (let i of arr) {
+          if (i % 2 === 1) {
+            oddArr.push(i);
+            sum += i;
+          }
+        }
+        minValue = Math.min(...oddArr);
+        answer.push(sum);
+        answer.push(minValue);
+        return answer;
+      }
+
+      arr = [12, 77, 38, 41, 53, 92, 85];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
