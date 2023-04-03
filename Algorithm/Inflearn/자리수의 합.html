@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(n, arr) {
+        arr.sort((a, b) => b - a);
+        let sumArr = [];
+        let sum = 0;
+
+        for (let i of arr) {
+          sum = Math.floor(i / 100) + Math.floor((i % 100) / 10) + (i % 10);
+          sumArr.push(sum);
+        }
+
+        return arr[sumArr.indexOf(Math.max(...sumArr))];
+      }
+
+      let arr = [128, 460, 603, 40, 521, 137, 123];
+      console.log(solution(7, arr));
+    </script>
+  </body>
+</html>
