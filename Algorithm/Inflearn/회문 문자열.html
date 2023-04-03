@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s) {
+        let str = s.toLowerCase();
+        let reverse = str.split("").reverse().join("");
+        if (str === reverse) {
+          return "YES";
+        } else {
+          return "NO";
+        }
+      }
+
+      let str = "gooofG";
+      console.log(solution(str));
+    </script>
+  </body>
+</html>
