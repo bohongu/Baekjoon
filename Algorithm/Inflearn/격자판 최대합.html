@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        let maxValue = Number.MIN_SAFE_INTEGER;
+        let sumRow = (sumColumn = sumCross1 = sumCross2 = 0);
+        for (let i = 0; i < arr.length; i++) {
+          sumRow = 0;
+          sumColumn = 0;
+          for (let j = 0; j < arr.length; j++) {
+            sumRow += arr[i][j];
+            sumColumn += arr[j][i];
+          }
+          maxValue = Math.max(sumRow, sumColumn);
+        }
+        for (let i = 0; i < arr.length; i++) {
+          sumCross1 += arr[i][i];
+          sumCross2 += arr[i][arr.length - i - 1];
+        }
+        maxValue = Math.max(maxValue, sumCross1, sumCross2);
+        return maxValue;
+      }
+
+      let arr = [
+        [10, 13, 10, 12, 15],
+        [12, 39, 30, 23, 11],
+        [11, 25, 50, 53, 15],
+        [19, 27, 29, 37, 27],
+        [19, 13, 30, 13, 19],
+      ];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
