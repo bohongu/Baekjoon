@@ -8,10 +8,14 @@
       function solution(n, arr) {
         arr.sort((a, b) => b - a);
         let sumArr = [];
-        let sum = 0;
 
         for (let i of arr) {
-          sum = Math.floor(i / 100) + Math.floor((i % 100) / 10) + (i % 10);
+          let sum = 0,
+            temp = i;
+          while (temp) {
+            sum += temp % 10;
+            temp = Math.floor(temp / 10);
+          }
           sumArr.push(sum);
         }
 
