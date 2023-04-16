@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(arr) {
+        for (let i = 0; i < arr.length - 1; i++) {
+          let idx = i;
+          for (let j = i + 1; j < arr.length; j++) {
+            if (arr[j] < arr[idx]) {
+              [arr[j], arr[idx]] = [arr[idx], arr[j]];
+            }
+          }
+        }
+        return arr;
+      }
+
+      let arr = [14, 21, 4, 89, 1, 2, 5];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
