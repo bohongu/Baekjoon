@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(times) {
+        let maxValue = Number.MIN_SAFE_INTEGER;
+        let timeLine = [];
+        for (let i of times) {
+          timeLine.push([i[0], "s"]);
+          timeLine.push([i[1], "e"]);
+        }
+        timeLine.sort((a, b) => {
+          if (a[0] === b[0]) return a[1].charCodeAt() - b[1].charCodeAt();
+          else return a[0] - b[0];
+        });
+        let cnt = 0;
+        for (let i of timeLine) {
+          if (i[1] === "s") {
+            cnt++;
+          } else {
+            cnt--;
+          }
+          maxValue = Math.max(maxValue, cnt);
+        }
+        return maxValue;
+      }
+
+      let arr = [
+        [14, 18],
+        [12, 15],
+        [15, 20],
+        [20, 30],
+        [5, 14],
+      ];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>
