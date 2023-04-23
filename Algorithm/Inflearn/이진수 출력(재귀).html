@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      let answer = "";
+      function solution(n) {
+        function reflection(l) {
+          if (l === 0) return;
+          else {
+            reflection(parseInt(l / 2));
+            answer += String(l % 2);
+          }
+        }
+
+        reflection(n);
+        return answer;
+      }
+
+      console.log(solution(11));
+    </script>
+  </body>
+</html>
