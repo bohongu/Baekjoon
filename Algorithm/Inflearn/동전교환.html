@@ -9,7 +9,7 @@
         let minValue = Number.MAX_SAFE_INTEGER;
         function DFS(L, sum) {
           if (sum > m) return;
-          if (L >= minValue) return; // 최적화
+          if (L >= minValue) return; // 최적화 (DFS-Cut Edge Tech)
           if (sum === m) {
             minValue = Math.min(minValue, L);
           } else {
